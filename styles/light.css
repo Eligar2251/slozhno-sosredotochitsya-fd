@@ -20,5 +20,8 @@
     --btn-border-opacity: rgba(53, 52, 48, 0.4);
     --background-image: url(../images/cover-image-light.png);
   }
+  .decorative__element {
+  display: none;
+}
 }
 

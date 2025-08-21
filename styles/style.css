@@ -1,4 +1,3 @@
-/* Основной контейнер */
 .page {
   margin: 0 auto;
   font-family: var(--font, monospace, Arial, sans-serif);
@@ -20,14 +19,6 @@
   font-weight: 700;
   line-height: 23.4px;
   font-size: var(--font-size);
-}
-
-.answer-title {
-  font-weight: 700;
-  background-color: var(--accent-color);
-  font-size: var(--font-size);
-  line-height: 23.4px;
-  color: var(--sub-text-color);
 }
 
 .answer-text {
@@ -55,14 +46,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 0 13px;
   color: var(--btn-color);
-  text-align: center;
   border: none;
   background: transparent;
   font-family: var(--font, monospace);
   font-weight: 400;
+  line-height: 18px;
   transition: all 0.2s ease;
+  min-height: 26px;
 }
 
 .header__theme-menu-button:hover {
@@ -133,7 +126,7 @@
   outline: none;
 }
 
-/* РАМКИ*/
+/* РАМКА */
 .frame::before {
   content: "";
   position: absolute;
@@ -182,10 +175,19 @@
   align-self: center;
 }
 
-/* ПЕРВАЯ СЕКЦИЯ */
-.question__section__multitasking {
+
+/* ОБЩИЕ СТИЛИ СЕКЦИЙ */
+.question__section {
   display: grid;
   grid-template-columns: 34% 66%;
+}
+
+.question__section-spaceed {
+  padding-block-end: 80px;
+}
+
+/* ПЕРВАЯ СЕКЦИЯ */
+.question__section__multitasking {
   padding-block-start: 60px;
 }
 
@@ -202,7 +204,6 @@
 /* ВТОРАЯ СЕКЦИЯ */
 .question__section-attention {
   padding-block-start: 80px;
-  padding-block-end: 80px;
 }
 
 .question__section-answer-attention-container {
@@ -221,12 +222,6 @@
 }
 
 /* ТРЕТЬЯ СЕКЦИЯ */
-.question__section-concentration {
-  display: grid;
-  grid-template-columns: 34% 66%;
-  padding-block-end: 80px;
-}
-
 .question__section-answer-subtitle {
   font-weight: 400;
 }
@@ -303,7 +298,7 @@
   line-height: 82.5%;
 }
 
-/* 768px */
+/* ЗАПРОС ПОД 768px */
 @media (max-width: 768px) {
   .header__theme-menu {
     display: flex;
@@ -339,11 +334,10 @@
 
   .question__section-concentration {
     grid-template-columns: 35% 65%;
-    padding-block-end: 80px;
   }
 }
 
-/* 560px */
+/* ЗАПРОС ПОД 560px */
 @media (max-width: 560px) {
   .header,
   .footer {
